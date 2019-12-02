@@ -101,24 +101,4 @@ const Modules = [
   135772,
 ];
 
-function calculateFuel (num) {
-  return (Math.floor(num / 3) - 2);
-}
-
-// Part 1:
-// Modules.map(module => calculateFuel(module)).reduce((a, b) => a + b);
-
-// Part 2:
-function calculateFuelFuel(num) {
-  let fuel = num;
-  let mods = [];
-
-  while (fuel > 0) {
-    mods.push(fuel);
-    fuel = calculateFuel(fuel);
-  }
-
-  return mods.reduce((a, b) => a + b);
-}
-
-Modules.map(module => calculateFuelFuel(module)).reduce((a, b) => a + b);
+export default Modules;
